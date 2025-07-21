@@ -28,7 +28,7 @@ body {
 
 /* 2. 让 #phone-screen 成为新的“根”容器，撑满整个浏览器窗口 */
 #phone-screen {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -135,7 +135,7 @@ body {
     flex-grow: 1;
     background-color: var(--secondary-bg);
     padding-top: calc(50px + env(safe-area-inset-top));
-    padding-bottom: 80px; /* 为底部导航栏留出空间 */
+    padding-bottom: 70px; /* 为底部导航栏留出空间 */
     box-sizing: border-box;
 }
 
@@ -225,7 +225,7 @@ body {
 
 /* 5. 【核心】让聊天输入框和底部导航栏自动适应iPhone底部的“小黑条”安全区 */
 #chat-input-area {
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     padding-top: 8px;
     padding-left: 8px;
     padding-right: 8px;
