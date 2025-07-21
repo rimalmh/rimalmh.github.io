@@ -38,14 +38,15 @@ body {
 
 /* 3. 【核心】隐藏掉模拟器的状态栏 */
 #status-bar {
-    display: none;
+    display: none !important;
 }
 
 /* 4. 【核心】让所有页面的头部自动适应iPhone的“刘海”安全区 */
 /*.header, .qzone-header {
     /* 使用 env(safe-area-inset-top) 自动获取顶部安全距离 */
     padding-top: calc(15px + env(safe-area-inset-top));
-}*/
+}
+*/
 
 /* 5. 【核心】让聊天输入框和底部导航栏自动适应iPhone底部的“小黑条”安全区 */
 #chat-input-area {
