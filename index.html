@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>EPhone</title>
@@ -39,6 +39,12 @@ body {
 /* 3. 【核心】隐藏掉模拟器的状态栏 */
 #status-bar {
     display: none !important;
+}
+
+/* 4. 【核心】让所有页面的头部自动适应iPhone的“刘海”安全区 */
+.header, .qzone-header {
+    /* 使用 env(safe-area-inset-top) 自动获取顶部安全距离 */
+    padding-top: calc(15px + env(safe-area-inset-top));
 }
 
         #status-bar { position: absolute; top: 0; left: 0; width: 100%; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; color: white; z-index: 10; font-size: 14px; box-sizing: border-box; pointer-events: none; }
@@ -189,7 +195,7 @@ body {
 
 /* 5. 【核心】让聊天输入框和底部导航栏自动适应iPhone底部的“小黑条”安全区 */
 #chat-input-area {
-    padding-bottom: calc(35px + env(safe-area-inset-bottom));
+    padding-bottom: calc(40px + env(safe-area-inset-bottom));
     padding-top: 8px;
     padding-left: 8px;
     padding-right: 8px;
@@ -504,6 +510,7 @@ body {
     background-color: rgba(247, 247, 247, 0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    padding-bottom: calc(40px + env(safe-area-inset-bottom));
 }
 
 .nav-item {
