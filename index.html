@@ -49,7 +49,7 @@ body {
     z-index: 15; 
     flex-shrink: 0; 
     padding: 15px 20px; 
-    padding-top: calc(15px + env(safe-area-inset-top));
+    padding-top: calc(5px + env(safe-area-inset-top));
     background-color: rgba(247, 247, 247, 0.8);
     backdrop-filter: blur(10px); 
     -webkit-backdrop-filter: blur(10px); 
@@ -109,15 +109,15 @@ body {
     flex-grow: 1;
     overflow-y: auto;
     background-color: var(--secondary-bg);
-    padding-top: 80px;
-    margin-top: -80px;
+    padding-top: calc(50px + env(safe-area-inset-top));
+    margin-top: calc(-50px - env(safe-area-inset-top));
 }
 
 /* 修改后的 #chat-list 样式，去掉了 padding 和 margin */
 #chat-list {
     flex-grow: 1;
     background-color: var(--secondary-bg);
-    padding-top: 80px; 
+    padding-top: calc(50px + env(safe-area-inset-top));
     padding-bottom: 50px; /* 为底部导航栏留出空间 */
     box-sizing: border-box;
 }
@@ -144,8 +144,8 @@ body {
     overflow-y: auto;
     overflow-x: hidden; /* 核心修正1: 强制禁止水平滚动/拖动 */
     padding: 10px 15px; /* 核心修正2: 将左右内边距增加到15px，提供更多呼吸空间 */
-    padding-top: 110px;
-    margin-top: -80px;
+    padding-top: calc(70px + env(safe-area-inset-top));
+    margin-top: calc(-50px - env(safe-area-inset-top));
     display: flex;
     flex-direction: column;
     gap: 20px;
