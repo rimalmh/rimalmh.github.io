@@ -16,7 +16,7 @@
 
 /* 1. 重置 body，使其成为一个干净的画布 */
 body {
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -28,10 +28,12 @@ body {
 
 /* 2. 让 #phone-screen 成为新的“根”容器，撑满整个浏览器窗口 */
 #phone-screen {
-    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     height: 100vh;
     padding: 0;
-    position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -138,48 +140,5 @@ body {
             
             <div id="home-screen" class="screen active">
                 <div id="clock-container"><div id="main-time">12:00</div><div id="main-date">星期一, 1月1日</div></div>
-                                                <!-- ▼▼▼ 用这整块代码替换你原来的 id="app-grid" ▼▼▼ -->
-<div id="app-grid">
-    <!-- 第一行：放2个图标 -->
-    <div class="app-row">
-        <div class="app-icon" onclick="showScreen('world-book-screen')">
-            <div class="icon-bg">
-                <!-- 【核心修改1】添加ID -->
-                <img id="icon-img-world-book" src="https://i.postimg.cc/HWf1JKzn/IMG-6435.jpg" alt="世界书">
-            </div>
-            <span class="label">世界书</span>
-        </div>
-        <div class="app-icon" onclick="showScreen('chat-list-screen')">
-            <div class="icon-bg">
-                <!-- 【核心修改2】添加ID -->
-                <img id="icon-img-qq" src="https://i.postimg.cc/MTC3Tkw8/IMG-6436.jpg" alt="QQ">
-            </div>
-            <span class="label">QQ</span>
-        </div>
-    </div>
-    <!-- 第二行：放3个图标 -->
-    <div class="app-row">
-        <div class="app-icon" onclick="showScreen('api-settings-screen')">
-            <div class="icon-bg">
-                <!-- 【核心修改3】添加ID -->
-                <img id="icon-img-api-settings" src="https://i.postimg.cc/MK8rJ8t7/IMG-6438.jpg" alt="API设置">
-            </div>
-            <span class="label">API设置</span>
-        </div>
-        <div class="app-icon" onclick="showScreen('wallpaper-screen')">
-            <div class="icon-bg">
-                <!-- 【核心修改4】添加ID -->
-                <img id="icon-img-wallpaper" src="https://i.postimg.cc/T1j03pQr/IMG-6440.jpg" alt="外观设置">
-            </div>
-            <span class="label">外观设置</span>
-        </div>
-        <div class="app-icon" onclick="showScreen('font-settings-screen')">
-            <div class="icon-bg">
-                <!-- 【核心修改5】添加ID -->
-                <img id="icon-img-font" src="https://i.postimg.cc/pXxk1JXk/IMG-6442.jpg" alt="字体">
-            </div>
-            <span class="label">字体</span>
-        </div>
-    </div>
-</div>
-<!-- ▲▲▲ 替换结束 ▲▲▲ -->
+ 
+</body>                                              
